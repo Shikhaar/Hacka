@@ -6,6 +6,7 @@ from data_loader import AadhaarDataLoader
 # Page Config
 st.set_page_config(
     page_title="OGD Aadhaar Policy Dashboard",
+    page_icon="🇮🇳",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -84,7 +85,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Main Header
-st.markdown('<div class="main-header">OGD Aadhaar Policy Dashboard</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">🇮🇳 OGD Aadhaar Policy Dashboard</div>', unsafe_allow_html=True)
 st.markdown("---")
 
 # Load Data
