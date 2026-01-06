@@ -1,17 +1,19 @@
 [tool.poetry]
-name = "hacka"
+name = "aadhaar-inactivity-analysis"
 version = "0.1.0"
-description = ""
-authors = ["Antigravity <antigravity@example.com>"]
+description = "Analysis of Aadhaar enrolment vs activity to estimate population inactivity"
+authors = ["Hackathon Team"]
 package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pandas = "*"
-numpy = "*"
-matplotlib = "*"
-seaborn = "*"
-ipykernel = "*"
+pandas = "^2.1.0"
+numpy = "^1.24.0"
+matplotlib = "^3.8.0"
+seaborn = "^0.13.0"
+scipy = "^1.11.0"
+scikit-learn = "^1.3.0"
+ipykernel = "^6.25.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
