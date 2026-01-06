@@ -12,9 +12,14 @@ class AadhaarDataLoader:
     """
     def __init__(self):
         load_dotenv()
-        self.dataset_path = os.getenv("DATASET_PATH")
-        if not self.dataset_path:
-            raise ValueError("DATASET_PATH not set in .env file.")
+        # Default to 'Dataset' folder in current directory if env var is not set
+        self.dataset_path = os.getenv("DATASET_PATH", "Dataset")
+        
+        # Check if path exists
+        if not os.path.exists(self.dataset_path):
+             # Try absolute path fallback or warn
+             # For Streamlit Cloud, it will be in root
+             pass
 
     @staticmethod
     def _read_folder(folder_path):
