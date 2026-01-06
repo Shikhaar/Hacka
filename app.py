@@ -6,7 +6,6 @@ from data_loader import AadhaarDataLoader
 # Page Config
 st.set_page_config(
     page_title="OGD Aadhaar Policy Dashboard",
-    page_icon="🇮🇳",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -85,7 +84,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Main Header
-st.markdown('<div class="main-header">🇮🇳 OGD Aadhaar Policy Dashboard</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">OGD Aadhaar Policy Dashboard</div>', unsafe_allow_html=True)
 st.markdown("---")
 
 # Load Data
@@ -104,7 +103,7 @@ view_option = st.sidebar.radio("Go to", ["Executive Summary", "State Health Card
 
 # --- Executive Summary ---
 if view_option == "Executive Summary":
-    st.subheader("📊 National Overview")
+    st.subheader("National Overview")
     
     # KPIs
     total_enrolled = df_master['Total_Enrolment'].sum()
@@ -162,7 +161,7 @@ if view_option == "Executive Summary":
 
 # --- State Health Card ---
 elif view_option == "State Health Card":
-    st.subheader("🏥 State Health Card")
+    st.subheader("State Health Card")
     
     selected_state = st.selectbox("Select State/UT", df_master['state'].sort_values().unique())
     state_data = df_master[df_master['state'] == selected_state].iloc[0]
@@ -184,7 +183,7 @@ elif view_option == "State Health Card":
 
 # --- Anomaly Watch ---
 elif view_option == "Anomaly Watch":
-    st.subheader("🕵️ Anomaly Detection (Z-Score Analysis)")
+    st.subheader("Anomaly Detection (Z-Score Analysis)")
     
     st.markdown("This view identifies states that deviate significantly from the national average. Large bubbles indicate higher deviation.")
     
